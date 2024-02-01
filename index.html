@@ -4,14 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Tugas_revou</title>
 </head>
 
 <body>
-  <article>
     <nav class="countainer" >
-      <img src="image/download.png" alt="logo" class="logo">
+      <input type="checkbox" class="myCheckBox" id="myCheck">
+      <label for="myCheck" class="checkButton">
+        <i class="fas fa bars"></i>
+      </label>
+      <label class="logo">RevoU</label>
       <ul>
         <li>
           <a href="#home">Home</a>
@@ -24,12 +28,11 @@
         </li>
       </ul>
     </nav>
-    <h4 class="line"  id="home"><span>RevoU</span></h4>
-    <header>
+    <!-- <h4 class="line"  id="home"><span>RevoU</span></h4> -->
+    <header  id="home">
       <div class="text_header">
-        <h1>Indonesia’s Largest Professional Skilling Platform</h1>
-        <p>Master today’s digital skills with industry leaders, get personalized mentorship, and access a community rich
-          in career opportunities!</p>
+        <h1>HI My Name <span id="name"></span></h1>
+        <p>Welcome to my web Documentation</p>
       </div>
     </header>
 
@@ -62,26 +65,27 @@
           <div class="content_right">
             <div class="right">
               <div class="container">  
-                <form id="contact" action="" method="post">
+                <form id="contact" name="message-form" onsubmit="return validateForm()">
                   <h3> Contact</h3>
-          
                   <fieldset>
-                    <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                  Nama : <input placeholder="Full nama" type="text" tabindex="1" required autofocus>
                   </fieldset>
                   <fieldset>
-                    <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                    Tanggal lahir :<input placeholder="birth-date" type="date" tabindex="2" required>
+                  </fieldset>
+                  Jenis Kelamin:
+                  <fieldset>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Perempuan</label>
                   </fieldset>
                   <fieldset>
-                    <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+                   <textarea name="messages" placeholder="pesan" cols="30" rows="10"></textarea>
                   </fieldset>
-                  <!-- <fieldset>
-                    <input placeholder="Your Web Site starts with http://" type="url" tabindex="4" required>
-                  </fieldset>
+  
                   <fieldset>
-                    <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
-                  </fieldset> -->
-                  <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="submit">Submit</button>
                   </fieldset>
                 </form>
       
@@ -215,10 +219,9 @@
           </div>
         </footer>
       </div>
-
     </footer>
 
-  </article>
+    <script src="main.js"></script>
 
 </body>
 
